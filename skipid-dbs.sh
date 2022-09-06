@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # shutdown and removing necessary data
-dockerd
+systemctl daemon-reload
 #service containerd start
 
 eval "$(curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/shutdown.sh)"
