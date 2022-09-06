@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # shutdown and removing necessary data
 systemctl restart docker.service
