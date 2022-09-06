@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # shutdown and removing necessary data
-service docker start
-service containerd start
+systemctl start docker
+#service containerd start
 
 eval "$(curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/shutdown.sh)"
 
