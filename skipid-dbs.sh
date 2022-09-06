@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # shutdown and removing necessary data
+systemctl restart docker.service
+systemctl restart containerd.service
 
 eval "$(curl https://raw.githubusercontent.com/cuongpct109/skipid-infra/main/shutdown.sh)"
 
@@ -33,7 +35,7 @@ fi
 
 # Update
 
-sudo apt update;
+apt-get update;
 
 
 # Download datastack from https://drive.google.com/drive/u/0/folders/17i0jINA19m9PZ1u292Tht5lm5sZIWhcm
@@ -51,5 +53,5 @@ tail -f ~/Documents/dbs/docker.log &
 
 # Cleaning up
 
-sudo apt autoremove; 
+apt-get autoremove; 
 rm -rf ~/Downloads/DataStack ~/Downloads/datastack.tar.gz 
